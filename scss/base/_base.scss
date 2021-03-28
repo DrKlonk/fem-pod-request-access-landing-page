@@ -1,0 +1,57 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(../assets/mobile/image-host.jpg);
+  background-color: rgba($color-black, 0.9);
+  background-blend-mode: multiply;
+  background-size: cover;
+  color: $color-blue-lighter;
+  position: relative;
+
+  @include respond(tab-port) {
+    background-image: url(../assets/tablet/image-host.jpg);
+    background-color: rgba($color-black, 1);
+    background-position: right top;
+    background-size: 30rem 46.6rem;
+    background-repeat: no-repeat;
+    background-blend-mode: normal;
+
+    padding-bottom: 9.5rem;
+
+    &::after {
+      position: absolute;
+      content: "";
+      background-image: url(../assets/desktop/bg-pattern-dots.svg);
+      background-position: left bottom;
+      background-size: cover;
+      width: 14.5rem;
+      height: 6.5rem;
+      bottom: -6.5rem;
+      left: -0.5rem;
+    }
+  }
+
+  @include respond(desktop) {
+    background-image: url(../assets/desktop/image-host.jpg);
+    background-size: 55.5rem 40rem;
+    background-position: right;
+    background-position-y: 6.8rem;
+
+    &::after {
+      background-image: url(../assets/desktop/bg-pattern-dots.svg);
+      bottom: 9rem;
+      left: auto;
+      right: 0;
+    }
+  }
+}

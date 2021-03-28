@@ -1,0 +1,196 @@
+.pod-request {
+  @include respond(tab-port) {
+    background-color: $color-black;
+    width: 42rem;
+  }
+
+  @include respond(desktop) {
+    width: 45.1875rem;
+  }
+
+  &__heading {
+    font-weight: $fw-light;
+    font-size: 1.625rem;
+    line-height: 2.375rem;
+    text-transform: uppercase;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    margin-bottom: 1.5rem;
+
+    @include respond(tab-port) {
+      text-align: start;
+      padding-top: 6rem;
+      font-size: 3rem;
+      line-height: 3.5rem;
+      align-items: flex-start;
+    }
+
+    @include respond(desktop) {
+      font-size: 3.25rem;
+      line-height: 3.875rem;
+    }
+
+    &--green {
+      color: $color-primary;
+    }
+
+    &--white {
+      color: $color-white;
+    }
+  }
+
+  &__paragraph {
+    font-weight: $fw-light;
+    text-align: center;
+    line-height: 1.6rem;
+    font-size: 0.9375rem;
+    color: $color-blue-lighter;
+    margin-bottom: 2rem;
+
+    @include respond(tab-port) {
+      width: 28rem;
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+      text-align: left;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column-reverse;
+
+    @include respond(tab-port) {
+      flex-direction: column;
+    }
+  }
+
+  &__form {
+    position: relative;
+
+    @include respond(tab-port) {
+      width: 65%;
+      margin-bottom: 3.75rem;
+    }
+  }
+
+  &__input[type="email"] {
+    position: relative;
+    z-index: 2;
+
+    &:active,
+    &:focus {
+      background-color: $color-blue-dark;
+      color: $color-white;
+    }
+
+    @include form-input;
+
+    background-color: $color-blue-dark;
+    color: $color-white;
+    margin-bottom: 1rem;
+
+    &::placeholder {
+      color: rgba($color-white, 0.5);
+    }
+
+    @include respond(tab-port) {
+      margin-bottom: 0;
+      height: 3.5rem;
+    }
+  }
+
+  &__label {
+    font-size: 0.875rem;
+    position: absolute;
+    top: -1.2rem;
+    left: 2rem;
+    transition: all 0.5s ease;
+    transform: translateY(1rem);
+    opacity: 0;
+    z-index: 1;
+
+    &.visible {
+      opacity: 1;
+      transform: translateY(-0.3rem);
+
+      @include respond(tab-port) {
+        transform: translateY(0);
+      }
+    }
+
+    @include respond(tab-port) {
+      transform: translateY(-1rem);
+      top: 4rem;
+    }
+  }
+
+  &__button {
+    @include form-input;
+    z-index: 3;
+    cursor: pointer;
+
+    background-color: $color-primary;
+
+    &:hover {
+      background-color: $color-primary-light;
+    }
+
+    @include respond(tab-port) {
+      position: absolute;
+      right: 0.3125rem;
+      top: 0.3125rem;
+      width: 40%;
+      height: 2.875rem;
+    }
+  }
+
+  &__logos {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 2.5rem;
+
+    @include respond(tab-port) {
+      justify-content: space-between;
+      width: 33.5rem;
+      margin-bottom: 0;
+    }
+  }
+
+  &__logo {
+    height: 1rem;
+    cursor: pointer;
+    filter: url(#defaultFilter);
+
+    &:hover {
+      filter: url(#hoverFilter);
+    }
+
+    &-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &--google {
+      height: 0.6rem;
+    }
+
+    @media only screen and (min-width: 35em) {
+      height: 1.6rem;
+      justify-content: space-between;
+
+      &--google {
+        height: 1rem;
+      }
+      &--podcasts {
+        height: 1.5rem;
+      }
+    }
+  }
+}

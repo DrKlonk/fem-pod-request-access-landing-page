@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Chivo:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+  <title>Frontend Mentor | Pod request access landing page</title>
+</head>
+<body>
+  <header class="header">
+    <img class="header__logo" src="assets/desktop/logo.svg">
+  </header>
+  <main class="main">
+    <article class="pod-request">
+    <h1 class="pod-request__heading">
+      <span class="pod-request__heading--green">Publish your podcasts</span>
+      <span class="pod-request__heading--white"></span>everywhere.</span>
+    </h1>
+    <p class="pod-request__paragraph">
+      Upload your audio to Pod with a single click. We’ll then distribute your podcast to Spotify, 
+      Apple Podcasts, Google Podcasts, Pocket Casts and more!
+    </p>
+    <div class="pod-request__container">
+      <form class="pod-request__form">
+        <input class="pod-request__input" type="email" id="email" name="email" placeholder="Email address">
+        <label class="pod-request__label" for="email">test</label>
+        <button class="pod-request__button" type="submit">
+          Request Access
+        </button>
+      </form>
+      <ul class="pod-request__logos">
+        <li class="pod-request__logo-item">
+          <img class="pod-request__logo" src="assets/desktop/spotify.svg">
+        </li>
+        <li class="pod-request__logo-item">
+          <img class="pod-request__logo" src="assets/desktop/apple-podcast.svg">
+        </li>
+        <li class="pod-request__logo-item">
+          <img class="pod-request__logo pod-request__logo--google" src="assets/desktop/google-podcasts.svg">
+        </li>
+        <li class="pod-request__logo-item">
+          <img class="pod-request__logo pod-request__logo--podcasts" src="assets/desktop/pocket-casts.svg">
+        </li>
+      </ul>
+    </div>
+  </article>
+  </main>
+  <script src="js/script.js"></script>  
+  <!-- Embed the color filters for svgs in HTML -->
+  <svg viewBox="0 0 600 400" width="0" height="0" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <filter id="hoverFilter">
+       <feColorMatrix in="SourceGraphic"
+    type="matrix"
+    values="0.33 0   0   0   0
+                        0   0.90  0   0   0
+                        0   0   0.69  0   0
+                        0   0   0   1   0 "/>
+    </filter>
+  </defs>
+</svg>
+  <svg viewBox="0 0 600 400" width="0" height="0" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <filter id="defaultFilter">
+            <feColorMatrix 
+                color-interpolation-filters="sRGB"
+                type="matrix"
+                values="0.35 0   0   0   0
+                        0   0.40  0   0   0
+                        0   0   0.54  0   0
+                        0   0   0   1   0 "/>
+            </filter>
+          </defs>
+        </svg>
+</body>
+</html>

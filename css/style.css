@@ -1,0 +1,238 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box; }
+
+body {
+  background-image: url(../assets/mobile/image-host.jpg);
+  background-color: rgba(18, 23, 37, 0.9);
+  background-blend-mode: multiply;
+  background-size: cover;
+  color: #c2cbe5;
+  position: relative; }
+  @media only screen and (min-width: 48em) {
+    body {
+      background-image: url(../assets/tablet/image-host.jpg);
+      background-color: #121725;
+      background-position: right top;
+      background-size: 30rem 46.6rem;
+      background-repeat: no-repeat;
+      background-blend-mode: normal;
+      padding-bottom: 9.5rem; }
+      body::after {
+        position: absolute;
+        content: "";
+        background-image: url(../assets/desktop/bg-pattern-dots.svg);
+        background-position: left bottom;
+        background-size: cover;
+        width: 14.5rem;
+        height: 6.5rem;
+        bottom: -6.5rem;
+        left: -0.5rem; } }
+  @media only screen and (min-width: 90em) {
+    body {
+      background-image: url(../assets/desktop/image-host.jpg);
+      background-size: 55.5rem 40rem;
+      background-position: right;
+      background-position-y: 6.8rem; }
+      body::after {
+        background-image: url(../assets/desktop/bg-pattern-dots.svg);
+        bottom: 9rem;
+        left: auto;
+        right: 0; } }
+
+html {
+  font-family: "Chivo", "sans-serif"; }
+
+@media only screen and (min-width: 48em) {
+  .pod-request {
+    background-color: #121725;
+    width: 42rem; } }
+
+@media only screen and (min-width: 90em) {
+  .pod-request {
+    width: 45.1875rem; } }
+
+.pod-request__heading {
+  font-weight: 300;
+  font-size: 1.625rem;
+  line-height: 2.375rem;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 1.5rem; }
+  @media only screen and (min-width: 48em) {
+    .pod-request__heading {
+      text-align: start;
+      padding-top: 6rem;
+      font-size: 3rem;
+      line-height: 3.5rem;
+      align-items: flex-start; } }
+  @media only screen and (min-width: 90em) {
+    .pod-request__heading {
+      font-size: 3.25rem;
+      line-height: 3.875rem; } }
+  .pod-request__heading--green {
+    color: #54e6af; }
+  .pod-request__heading--white {
+    color: #fff; }
+
+.pod-request__paragraph {
+  font-weight: 300;
+  text-align: center;
+  line-height: 1.6rem;
+  font-size: 0.9375rem;
+  color: #c2cbe5;
+  margin-bottom: 2rem; }
+  @media only screen and (min-width: 48em) {
+    .pod-request__paragraph {
+      width: 28rem;
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+      text-align: left; } }
+
+.pod-request__container {
+  display: flex;
+  flex-direction: column-reverse; }
+  @media only screen and (min-width: 48em) {
+    .pod-request__container {
+      flex-direction: column; } }
+
+.pod-request__form {
+  position: relative; }
+  @media only screen and (min-width: 48em) {
+    .pod-request__form {
+      width: 65%;
+      margin-bottom: 3.75rem; } }
+
+.pod-request__input[type="email"] {
+  position: relative;
+  z-index: 2;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 0.875rem;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 3rem;
+  padding: 1rem 2rem;
+  background-color: #2c344b;
+  color: #fff;
+  margin-bottom: 1rem; }
+  .pod-request__input[type="email"]:active, .pod-request__input[type="email"]:focus {
+    background-color: #2c344b;
+    color: #fff; }
+  .pod-request__input[type="email"]::placeholder {
+    color: rgba(255, 255, 255, 0.5); }
+  @media only screen and (min-width: 48em) {
+    .pod-request__input[type="email"] {
+      margin-bottom: 0;
+      height: 3.5rem; } }
+
+.pod-request__label {
+  font-size: 0.875rem;
+  position: absolute;
+  top: -1.2rem;
+  left: 2rem;
+  transition: all 0.5s ease;
+  transform: translateY(1rem);
+  opacity: 0;
+  z-index: 1; }
+  .pod-request__label.visible {
+    opacity: 1;
+    transform: translateY(-0.3rem); }
+    @media only screen and (min-width: 48em) {
+      .pod-request__label.visible {
+        transform: translateY(0); } }
+  @media only screen and (min-width: 48em) {
+    .pod-request__label {
+      transform: translateY(-1rem);
+      top: 4rem; } }
+
+.pod-request__button {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 0.875rem;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 3rem;
+  padding: 1rem 2rem;
+  z-index: 3;
+  cursor: pointer;
+  background-color: #54e6af; }
+  .pod-request__button:hover {
+    background-color: #b3ffe2; }
+  @media only screen and (min-width: 48em) {
+    .pod-request__button {
+      position: absolute;
+      right: 0.3125rem;
+      top: 0.3125rem;
+      width: 40%;
+      height: 2.875rem; } }
+
+.pod-request__logos {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 2.5rem; }
+  @media only screen and (min-width: 48em) {
+    .pod-request__logos {
+      justify-content: space-between;
+      width: 33.5rem;
+      margin-bottom: 0; } }
+
+.pod-request__logo {
+  height: 1rem;
+  cursor: pointer;
+  filter: url(#defaultFilter); }
+  .pod-request__logo:hover {
+    filter: url(#hoverFilter); }
+  .pod-request__logo-item {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .pod-request__logo--google {
+    height: 0.6rem; }
+  @media only screen and (min-width: 35em) {
+    .pod-request__logo {
+      height: 1.6rem;
+      justify-content: space-between; }
+      .pod-request__logo--google {
+        height: 1rem; }
+      .pod-request__logo--podcasts {
+        height: 1.5rem; } }
+
+body {
+  margin: 0 1.5rem; }
+  @media only screen and (min-width: 48em) {
+    body {
+      margin-left: 2.625rem; } }
+  @media only screen and (min-width: 90em) {
+    body {
+      margin-left: 10.25rem; } }
+
+.main {
+  margin-bottom: 2rem; }
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3.75rem 0; }
+  @media only screen and (min-width: 48em) {
+    .header {
+      justify-content: flex-start;
+      margin: 3rem 0 9.6rem; } }
+  @media only screen and (min-width: 90em) {
+    .header {
+      justify-content: flex-start;
+      margin: 6.25rem 0; } }

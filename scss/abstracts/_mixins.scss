@@ -1,0 +1,23 @@
+@mixin form-input {
+  font-family: inherit;
+  font-weight: $fw-bold;
+  font-size: 0.875rem;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 3rem;
+  padding: 1rem 2rem;
+}
+
+@mixin respond($breakpoint) {
+  @if ($breakpoint == tab-port) {
+    @media only screen and (min-width: 48em) {
+      @content;
+    }
+  }
+  @if ($breakpoint == desktop) {
+    @media only screen and (min-width: 90em) {
+      @content;
+    }
+  }
+}

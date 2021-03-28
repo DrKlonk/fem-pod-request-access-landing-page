@@ -1,0 +1,32 @@
+body {
+  margin: 0 1.5rem;
+
+  @include respond(tab-port) {
+    margin-left: 2.625rem;
+  }
+
+  @include respond(desktop) {
+    margin-left: 10.25rem;
+  }
+}
+
+.main {
+  margin-bottom: 2rem;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3.75rem 0;
+
+  @include respond(tab-port) {
+    justify-content: flex-start;
+    margin: 3rem 0 9.6rem;
+  }
+
+  @include respond(desktop) {
+    justify-content: flex-start;
+    margin: 6.25rem 0;
+  }
+}
