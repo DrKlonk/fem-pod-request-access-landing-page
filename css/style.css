@@ -26,9 +26,7 @@ body {
     left: -1.5rem; }
   @media only screen and (min-width: 48em) {
     body {
-      background-repeat: no-repeat;
       background-color: #121725;
-      background-blend-mode: unset;
       padding-bottom: 9.5rem; }
       body::before {
         background-image: url(../assets/tablet/image-host.jpg);
