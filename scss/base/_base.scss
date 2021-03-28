@@ -11,20 +11,39 @@ html {
 }
 
 body {
-  background-image: url(../assets/mobile/image-host.jpg);
-  background-color: rgba($color-black, 0.9);
-  background-blend-mode: multiply;
-  background-size: cover;
+  max-width: 1440px;
+  min-height: 100vh;
   color: $color-blue-lighter;
   position: relative;
 
+  &::before {
+    position: absolute;
+    content: "";
+    background-image: url(../assets/mobile/image-host.jpg);
+    background-size: cover;
+    width: 100vw;
+    height: 100%;
+    z-index: -1;
+    background-color: rgba($color-black, 0.9);
+    background-blend-mode: multiply;
+    left: -1.5rem;
+  }
+
   @include respond(tab-port) {
-    background-image: url(../assets/tablet/image-host.jpg);
-    background-color: rgba($color-black, 1);
-    background-position: right top;
-    background-size: 30rem 46.6rem;
+    &::before {
+      background-image: url(../assets/tablet/image-host.jpg);
+      background-size: auto;
+      right: -1.5rem;
+      left: auto;
+      top: -0.1rem;
+      width: 491px;
+      height: 767px;
+      background-color: transparent;
+    }
+
     background-repeat: no-repeat;
-    background-blend-mode: normal;
+    background-color: rgba($color-black, 1);
+    background-blend-mode: unset;
 
     padding-bottom: 9.5rem;
 
@@ -42,10 +61,12 @@ body {
   }
 
   @include respond(desktop) {
-    background-image: url(../assets/desktop/image-host.jpg);
-    background-size: 55.5rem 40rem;
-    background-position: right;
-    background-position-y: 6.8rem;
+    &::before {
+      background-image: url(../assets/desktop/image-host.jpg);
+      width: 55.5rem;
+      height: 40rem;
+      top: 5.2rem;
+    }
 
     &::after {
       background-image: url(../assets/desktop/bg-pattern-dots.svg);

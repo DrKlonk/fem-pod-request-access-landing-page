@@ -9,21 +9,36 @@ html {
   box-sizing: border-box; }
 
 body {
-  background-image: url(../assets/mobile/image-host.jpg);
-  background-color: rgba(18, 23, 37, 0.9);
-  background-blend-mode: multiply;
-  background-size: cover;
+  max-width: 1440px;
+  min-height: 100vh;
   color: #c2cbe5;
   position: relative; }
+  body::before {
+    position: absolute;
+    content: "";
+    background-image: url(../assets/mobile/image-host.jpg);
+    background-size: cover;
+    width: 100vw;
+    height: 100%;
+    z-index: -1;
+    background-color: rgba(18, 23, 37, 0.9);
+    background-blend-mode: multiply;
+    left: -1.5rem; }
   @media only screen and (min-width: 48em) {
     body {
-      background-image: url(../assets/tablet/image-host.jpg);
-      background-color: #121725;
-      background-position: right top;
-      background-size: 30rem 46.6rem;
       background-repeat: no-repeat;
-      background-blend-mode: normal;
+      background-color: #121725;
+      background-blend-mode: unset;
       padding-bottom: 9.5rem; }
+      body::before {
+        background-image: url(../assets/tablet/image-host.jpg);
+        background-size: auto;
+        right: -1.5rem;
+        left: auto;
+        top: -0.1rem;
+        width: 491px;
+        height: 767px;
+        background-color: transparent; }
       body::after {
         position: absolute;
         content: "";
@@ -35,16 +50,16 @@ body {
         bottom: -6.5rem;
         left: -0.5rem; } }
   @media only screen and (min-width: 90em) {
-    body {
+    body::before {
       background-image: url(../assets/desktop/image-host.jpg);
-      background-size: 55.5rem 40rem;
-      background-position: right;
-      background-position-y: 6.8rem; }
-      body::after {
-        background-image: url(../assets/desktop/bg-pattern-dots.svg);
-        bottom: 9rem;
-        left: auto;
-        right: 0; } }
+      width: 55.5rem;
+      height: 40rem;
+      top: 5.2rem; }
+    body::after {
+      background-image: url(../assets/desktop/bg-pattern-dots.svg);
+      bottom: 9rem;
+      left: auto;
+      right: 0; } }
 
 html {
   font-family: "Chivo", "sans-serif"; }
@@ -185,34 +200,35 @@ html {
   list-style: none;
   display: flex;
   justify-content: space-around;
-  align-items: center;
-  margin-bottom: 2.5rem; }
+  align-items: stretch;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap; }
   @media only screen and (min-width: 48em) {
     .pod-request__logos {
-      justify-content: space-between;
-      width: 33.5rem;
-      margin-bottom: 0; } }
+      margin: 0;
+      justify-content: flex-start; } }
 
 .pod-request__logo {
-  height: 1rem;
   cursor: pointer;
-  filter: url(#defaultFilter); }
+  filter: url(#defaultFilter);
+  height: 2rem;
+  justify-content: space-between; }
   .pod-request__logo:hover {
     filter: url(#hoverFilter); }
   .pod-request__logo-item {
     display: flex;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    margin: 0.5rem; }
+    @media only screen and (min-width: 48em) {
+      .pod-request__logo-item {
+        margin: 0; }
+        .pod-request__logo-item:not(:last-child) {
+          margin-right: 2rem; } }
   .pod-request__logo--google {
-    height: 0.6rem; }
-  @media only screen and (min-width: 35em) {
-    .pod-request__logo {
-      height: 1.6rem;
-      justify-content: space-between; }
-      .pod-request__logo--google {
-        height: 1rem; }
-      .pod-request__logo--podcasts {
-        height: 1.5rem; } }
+    height: 1.3rem; }
+  .pod-request__logo--podcasts {
+    height: 1.8rem; }
 
 body {
   margin: 0 1.5rem; }
@@ -230,7 +246,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 3.75rem 0; }
+  margin-bottom: 3.75rem;
+  padding-top: 3.75rem; }
   @media only screen and (min-width: 48em) {
     .header {
       justify-content: flex-start;
