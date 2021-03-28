@@ -1,6 +1,6 @@
 # Frontend Mentor - Pod request access landing page solution
 
-This is a solution to the [Pod request access landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/pod-request-access-landing-page-eyTmdkLSG). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+This is a solution to the [Pod request access landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/pod-request-access-landing-page-eyTmdkLSG). Frontend Mentor challenges help me improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -13,9 +13,6 @@ This is a solution to the [Pod request access landing page challenge on Frontend
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -32,7 +29,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Add live site URL here](https://fem-pod-request-access-landing-page-beta.vercel.app/)
 
 ## My process
 
@@ -45,18 +42,21 @@ Users should be able to:
 
 ### What I learned
 
+- That SVG filters are annoying to adapt. I hope someone can point me in the right direction to fix putting it in the HTML. I gave up after about an hour of googling and trying different methods.
+- That autocompletion defaults to the browsers styling. Which is nice for usability, but kind of ugly too. And hard to fix with CSS.
+- Having the Figma files for a challenge helps getting it more pixel perfect, which is nice. It's fun to play around with that, I know it is not the most important. It also is nice to see how the Figma files are structured by a real designer and that my methods come quite close.
+- I should not commit everything in one go. I'm off to write that sentence on a chalkboard somewhere a 1000 times.
+
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+- [ ] Fix SVG properly, not by dumping it like this in the HTML
+- [ ] Add styling when autocompleting an email address
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Hex to colorfilter](https://codepen.io/brucebentley/pen/orGPRg) - This helped me to create the filters for the icons. I struggled a bit getting it working.
 
 ## Author
 
 - Website - [Joran Minjon](https://joranminjon.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@DrKlonk](https://www.frontendmentor.io/profile/DrKlonk)
