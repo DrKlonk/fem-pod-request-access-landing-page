@@ -124,7 +124,7 @@ html {
   @media only screen and (min-width: 48em) {
     .pod-request__form {
       margin: 0;
-      width: 65%;
+      width: 80%;
       margin-bottom: 3.75rem; } }
 
 .pod-request__input[type="email"] {
@@ -151,7 +151,8 @@ html {
   @media only screen and (min-width: 48em) {
     .pod-request__input[type="email"] {
       margin-bottom: 0;
-      height: 3.5rem; } }
+      height: 3.5rem;
+      max-width: none; } }
 
 .pod-request__label {
   font-size: 0.875rem;
