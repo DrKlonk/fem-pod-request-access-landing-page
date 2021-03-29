@@ -70,8 +70,10 @@
 
   &__form {
     position: relative;
+    margin: 0 auto;
 
     @include respond(tab-port) {
+      margin: 0;
       width: 65%;
       margin-bottom: 3.75rem;
     }
@@ -80,6 +82,11 @@
   &__input[type="email"] {
     position: relative;
     z-index: 2;
+    @include form-input;
+
+    background-color: $color-blue-dark;
+    color: $color-white;
+    margin-bottom: 1rem;
 
     &:active,
     &:focus {
@@ -87,12 +94,6 @@
       color: $color-white;
       box-shadow: 0 0 0 1px white;
     }
-
-    @include form-input;
-
-    background-color: $color-blue-dark;
-    color: $color-white;
-    margin-bottom: 1rem;
 
     &::placeholder {
       color: rgba($color-white, 0.5);

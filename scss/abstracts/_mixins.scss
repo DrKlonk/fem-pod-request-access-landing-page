@@ -2,11 +2,12 @@
   font-family: inherit;
   font-weight: $fw-bold;
   font-size: 0.875rem;
-  width: 100%;
   outline: none;
   border: none;
   border-radius: 3rem;
   padding: 1rem 2rem;
+  width: 100%;
+  max-width: 34rem;
 }
 
 @mixin respond($breakpoint) {
