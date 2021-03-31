@@ -1,6 +1,6 @@
 # Frontend Mentor - Pod request access landing page solution
 
-This is a solution to the [Pod request access landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/pod-request-access-landing-page-eyTmdkLSG). Frontend Mentor challenges help me improve your coding skills by building realistic projects.
+This is a solution to the [Pod request access landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/pod-request-access-landing-page-eyTmdkLSG). Frontend Mentor challenges help me improve my coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -44,7 +44,7 @@ Users should be able to:
 
 - That SVG filters are annoying to adapt. I hope someone can point me in the right direction to fix putting it in the HTML. I gave up after about an hour of googling and trying different methods.
 - That autocompletion defaults to the browsers styling. Which is nice for usability, but kind of ugly too. And hard to fix with CSS.
-- Having the Figma files for a challenge helps getting it more pixel perfect, which is nice. It's fun to play around with that, I know it is not the most important. It also is nice to see how the Figma files are structured by a real designer and that my methods come quite close.
+- Having the Figma files for a challenge helps getting it more pixel perfect, which is nice. It's fun to play around with that, although I know it is not the most important. It also is nice to see how the Figma files are structured by a real designer and that my methods come quite close.
 - I should not commit everything in one go. I'm off to write that sentence on a chalkboard somewhere a 1000 times.
 
 ### Continued development
